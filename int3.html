@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AnExtraRep Assignment</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .card {
+            width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        .card-header {
+            background-color: #000;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            border-radius: 8px;
+        }
+        .card-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .card-logo img {
+            width: 40px;
+            margin-right: 10px;
+        }
+        .card-title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .form-field {
+            margin-bottom: 20px;
+            text-align: center; 
+        }
+        .form-field input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-field label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .date-field-container {
+            display: flex;
+            align-items: center;
+            justify-content: center; 
+            margin-bottom: 20px; 
+        }
+        .date-field-container input {
+            width: 20px;
+        }
+        .form-submit {
+            text-align: center;
+        }
+        .form-submit button {
+            padding: 10px 20px;
+            background-color: green;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="card-header">
+            <div class="card-logo">
+                <img src="imgg.png" alt="Logo">
+                <span class="card-title">AnExtraRep</span>
+            </div>
+        </div>
+        <form action="insert.php" method="POST" enctype="multipart/form-data">
+            <div class="form-field">
+                <input type="text" name="fullname" placeholder="Full Name">
+            </div>
+            <div class="form-field">
+                <input type="email" name="email" placeholder="Email ID">
+            </div>
+            <div class="form-field">
+                <label>Date of Birth:</label>
+                <div class="date-field-container">
+                    <input type="text" name="day" placeholder="DD" maxlength="2" size="2">
+                    <span>/</span>
+                    <input type="text" name="month" placeholder="MM" maxlength="2" size="2">
+                    <span>/</span>
+                    <input type="text" name="year" placeholder="YYYY" maxlength="4" size="4">
+                </div>
+            </div>
+            <div class="form-field">
+                <label>Upload Health Report:</label>
+                <input type="file" name="health_report">
+            </div>
+            <div class="form-submit">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
